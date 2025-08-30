@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Women Safety</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>Women Safety 🚨</h1>
+    <p class="sub">Quick actions for emergencies</p>
+  </header>
+
+  <!-- Guardian setup -->
+  <section class="card">
+    <h2>Trusted Contact</h2>
+    <p class="muted">Save your guardian’s WhatsApp/SMS number (with country code, e.g. +91XXXXXXXXXX).</p>
+    <div class="row">
+      <input id="guardian" placeholder="+91XXXXXXXXXX" />
+      <button id="saveGuardian">Save</button>
+    </div>
+    <small id="savedMsg" class="muted"></small>
+  </section>
+
+  <!-- Emergency actions -->
+  <section class="grid">
+    <div class="card big">
+      <h2>Emergency Alert</h2>
+      <p class="muted">Send message with your location</p>
+      <div class="row">
+        <button id="waBtn">Share via WhatsApp</button>
+        <button id="smsBtn">Share via SMS</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Call Emergency</h2>
+      <p class="muted">Instant dial (India):</p>
+      <a class="call" href="tel:100">Call 100</a>
+    </div>
+
+    <div class="card">
+      <h2>Fake Call</h2>
+      <p class="muted">Distraction in panic situations</p>
+      <button id="fakeCallBtn">Start Fake Call</button>
+    </div>
+  </section>
+
+  <!-- Tips -->
+  <section class="card">
+    <h2>Safety Tips</h2>
+    <ul>
+      <li>Always keep your phone charged and add 100 to speed dial.</li>
+      <li>Share your live location with trusted contacts when outside.</li>
+      <li>Avoid poorly lit and isolated areas at night.</li>
+    </ul>
+  </section>
+
+  <!-- Fake call overlay -->
+  <div id="overlay" class="overlay" hidden>
+    <div class="incoming">
+      <div class="name">Mom (Incoming…)</div>
+      <div class="actions">
+        <button id="decline">Decline</button>
+        <button id="accept">Accept</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
